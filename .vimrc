@@ -26,6 +26,8 @@ Bundle 'gmarik/vundle'
 " Bundle 'scrooloose/syntastic'
 " Bundle 'lukaszb/vim-web-indent'
 Bundle 'wting/rust.vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'toyamarinyon/vim-swift'
 Bundle 'bling/vim-airline'
 
 " Configure airline
@@ -133,6 +135,10 @@ set list
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
+" More natural split opening
+set splitbelow
+set splitright
+
 "------------------------------------------------------------
 " MAPPINGS
 "------------------------------------------------------------
@@ -142,6 +148,12 @@ inoremap {<CR>  {<CR><BS>}<Esc>O
 
 " Make Enter insert a blank line without going into insert mode.
 nnoremap <CR> o<Esc>
+
+" Make H and L jump to beginning and end of line content
+noremap H ^
+noremap L $
+
+imap lkj
 
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as
 " which is the default
