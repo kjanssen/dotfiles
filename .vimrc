@@ -29,9 +29,11 @@ Bundle 'wting/rust.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'toyamarinyon/vim-swift'
 Bundle 'bling/vim-airline'
+Bundle 'scrooloose/nerdtree'
 
 " Configure airline
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 set noshowmode
 
 " colorschemes
@@ -153,7 +155,7 @@ nnoremap <CR> o<Esc>
 noremap H ^
 noremap L $
 
-imap lkj
+imap lkj <Esc>
 
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as
 " which is the default
@@ -162,6 +164,10 @@ map Y y$
 " Map <C-L> (redraw screen) to also turn off search highlighting until the
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
+
+" Use J and K to switch buffers, like switcing tabs in vimium.
+nnoremap J :bprevious<CR>
+nnoremap K :bnext<CR>
 
 "------------------------------------------------------------
 " AUTOCOMMANDS
