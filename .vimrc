@@ -28,8 +28,8 @@ Bundle 'gmarik/vundle'
 Bundle 'wting/rust.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'toyamarinyon/vim-swift'
-Bundle 'bling/vim-airline'
 Bundle 'scrooloose/nerdtree'
+Bundle 'bling/vim-airline'
 
 " Configure airline
 let g:airline_powerline_fonts = 1
@@ -169,6 +169,12 @@ nnoremap <C-L> :nohl<CR><C-L>
 nnoremap J :bprevious<CR>
 nnoremap K :bnext<CR>
 
+" Use ctrl-j and ctrl-k to cycle through windows.
+nnoremap <C-j> <C-w>W
+nnoremap <C-k> <C-w>w
+
+map <C-n> :NERDTreeToggle<CR>
+
 "------------------------------------------------------------
 " AUTOCOMMANDS
 "------------------------------------------------------------
@@ -184,5 +190,12 @@ if has("autocmd")
     autocmd!
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
   augroup END " }
+
+  " Open NERDTree if vim opens with no file specified
+  autocmd StdinReadPre * let s:std_in=1
+  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+  " Close vim if the only window left open is NERDTree
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 endif
 
