@@ -23,8 +23,9 @@ Bundle 'gmarik/vundle'
 " original repos on github
 " Bundle 'Lokaltog/vim-easymotion'
 " Bundle 'kien/ctrlp.vim'
-" Bundle 'scrooloose/syntastic'
 " Bundle 'lukaszb/vim-web-indent'
+Bundle 'scrooloose/syntastic'
+Bundle 'lambdatoast/elm.vim'
 Bundle 'wting/rust.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'toyamarinyon/vim-swift'
@@ -175,6 +176,8 @@ nnoremap <C-k> <C-w>w
 
 map <C-n> :NERDTreeToggle<CR>
 
+nnoremap X :bp\|bd # <CR>
+
 "------------------------------------------------------------
 " AUTOCOMMANDS
 "------------------------------------------------------------
@@ -184,6 +187,7 @@ if has("autocmd")
   " Syntax of these languages is fussy over tabs Vs spaces
   autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
   autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd FileType haskell setlocal ts=4 sts=4 sw=4
 
   " reload vimrc on write
   augroup reload_vimrc " {
