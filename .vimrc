@@ -21,9 +21,9 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 "
 " original repos on github
-" Bundle 'Lokaltog/vim-easymotion'
 " Bundle 'kien/ctrlp.vim'
 " Bundle 'lukaszb/vim-web-indent'
+Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/syntastic'
 Bundle 'lambdatoast/elm.vim'
 Bundle 'wting/rust.vim'
@@ -41,6 +41,7 @@ set noshowmode
 Bundle 'tomasr/molokai'
 Bundle 'tpope/vim-vividchalk'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'whatyouhide/vim-gotham'
 
 "------------------------------------------------------------
 " SETTINGS
@@ -127,7 +128,7 @@ set history=10000
 "set colorscheme
 set t_Co=256
 set background=dark
-color solarized
+colorscheme solarized
 
 " no word wrapping
 set nowrap
