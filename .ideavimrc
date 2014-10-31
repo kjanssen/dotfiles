@@ -1,0 +1,8 @@
+" Make Enter insert a blank line without going into insert mode.
+nnoremap <CR> o<Esc>
+
+" Make H and L jump to beginning and end of line content
+noremap H ^
+noremap L $
+
+imap lkj <Esc>
