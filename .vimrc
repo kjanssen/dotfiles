@@ -23,14 +23,16 @@ Bundle 'gmarik/vundle'
 " original repos on github
 " Bundle 'kien/ctrlp.vim'
 " Bundle 'lukaszb/vim-web-indent'
-Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'lambdatoast/elm.vim'
+" Bundle 'wting/rust.vim'
+" Bundle 'toyamarinyon/vim-swift'
+" Bundle 'Shutnik/jshint2.vim'
 Bundle 'scrooloose/syntastic'
-Bundle 'lambdatoast/elm.vim'
-Bundle 'wting/rust.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'toyamarinyon/vim-swift'
 Bundle 'scrooloose/nerdtree'
 Bundle 'bling/vim-airline'
+Bundle 'tpope/vim-fugitive'
+Bundle 'editorconfig/editorconfig-vim'
 
 " Configure airline
 let g:airline_powerline_fonts = 1
@@ -189,6 +191,7 @@ if has("autocmd")
   autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
   autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
   autocmd FileType haskell setlocal ts=4 sts=4 sw=4
+  autocmd BufRead,BufNewFile *.handlebars set filetype=xml
 
   " reload vimrc on write
   augroup reload_vimrc " {
