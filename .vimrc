@@ -34,16 +34,24 @@ Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'editorconfig/editorconfig-vim'
 
+" WebDev plugins
+Bundle 'pangloss/vim-javascript'
+Bundle 'mxw/vim-jsx'
+Bundle 'wavded/vim-stylus'
+
+" Configure syntastic
+let g:syntastic_javascript_checkers = ['jsxhint']
+
 " Configure airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 set noshowmode
 
 " colorschemes
-Bundle 'tomasr/molokai'
-Bundle 'tpope/vim-vividchalk'
+" Bundle 'tomasr/molokai'
+" Bundle 'tpope/vim-vividchalk'
+" Bundle 'whatyouhide/vim-gotham'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'whatyouhide/vim-gotham'
 
 "------------------------------------------------------------
 " SETTINGS
